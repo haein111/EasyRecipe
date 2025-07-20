@@ -2,12 +2,13 @@ import SearchImages from "../api/searchApi";
 import RecipeList from "./RecipeList";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import "./SearchResult.css";
 
 function SearchResult() {
   const [result, setResult] = useState([]);
 
   const location = useLocation();
-  console.log(location);
+
   const term = new URLSearchParams(location.search).get("q");
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +19,12 @@ function SearchResult() {
     fetchData();
   }, [term]);
 
-  return <RecipeList images={result} />;
+  return (
+    <>
+      <div className="search-result-keyword">Your recipe: {term}</div>
+      <RecipeList images={result} />
+    </>
+  );
 }
 
 export default SearchResult;

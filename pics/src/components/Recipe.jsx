@@ -19,9 +19,9 @@ function Recipe() {
 
   return (
     <div className="recipe-page">
-      <button className="home-button" onClick={() => navigate("/")}>
+      {/* <button className="home-button" onClick={() => navigate("/")}>
         Home
-      </button>
+      </button> */}
       <h1 className="recipe-title">{recipe.title}</h1>
       <img className="recipe-image" src={recipe.image} alt={recipe.title} />
       <div className="recipe-content">

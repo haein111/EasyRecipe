@@ -21,16 +21,16 @@ function App() {
     <div>
       <HomeButton />
       <Routes>
+        <Route path="/" element={<SearchBar onSubmit={handleSubmit} />} />
         <Route
-          path="/"
+          path="/search"
           element={
             <div>
-              <SearchBar onSubmit={handleSubmit} />
-              <RecipeList images={images} />
+              <SearchResult />
+              {/* <RecipeList images={images} /> */}
             </div>
           }
         />
-        <Route path="/search" element={<SearchResult />} />
         <Route path="/recipe/:id" element={<Recipe />} />
       </Routes>
     </div>

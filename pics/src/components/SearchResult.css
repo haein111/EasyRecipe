@@ -1,3 +1,9 @@
 img:hover {
   cursor: pointer;
 }
+
+.search-result-keyword {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 24px 24px 24px 50px;
+}
